@@ -39,7 +39,7 @@ function HomePage() {
 
   useEffect(() => {
     dispatch(getPopularMovies());
-    dispatch(getTopRatedMovies());
+    dispatch(getTopRatedMovies(1));
     dispatch(getGenreMovies());
   }, [dispatch, activeIndex]);
   const formatDate = (dateString) => {
