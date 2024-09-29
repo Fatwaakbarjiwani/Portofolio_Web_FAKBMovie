@@ -15,6 +15,7 @@ import { setIdMovie, setOpen } from "../../redux/reducers/movieReducer";
 
 export default function DetailMovie() {
   const imageUrlUHD = import.meta.env.VITE_REACT_WORIIMAGE;
+  const imageUrl = import.meta.env.VITE_REACT_W780IMAGE;
   const { id } = useParams();
   const dispatch = useDispatch();
   const { detailMovie, actorMovie } = useSelector(
@@ -54,7 +55,7 @@ export default function DetailMovie() {
           {/* Poster Image */}
           <div className="w-40 md:w-1/4 lg:w-1/6">
             <img
-              src={`${imageUrlUHD}${detailMovie?.poster_path}`}
+              src={`${imageUrl}${detailMovie?.poster_path}`}
               className="rounded-2xl shadow-lg"
               alt={detailMovie?.title}
             />
